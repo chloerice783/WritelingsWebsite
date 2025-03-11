@@ -1,0 +1,61 @@
+
+* {
+    font-family: 'Cinzel', serif, 'MedievalSharp', cursive;
+  }
+
+
+  header {
+    text-align: center;
+    background-color: #4d4896; /* Deep mystical purple-blue */
+    padding-top: 5px; /* Reduced padding */
+    padding-bottom: 5px; /* Reduced padding */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Stronger glowing effect */
+    width: 100vw;
+    color: #F4F9FF;
+}
+
+h1 {
+    font-size: 60px; /* Reduced font size */
+    color: #F4F9FF; /* Starry white text */
+    background-color: #302a74; /* Deep purplish blue */
+    padding: 15px 40px; /* Reduced padding */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 30px #F1C27D; /* Soft glowing effect */
+    text-shadow: 0 0 15px #F1C27D, 0 0 30px #F1C27D; /* Enhance glowing effect */
+    line-height: 1.2; /* Reduced line height to make text more condensed */
+}
+
+.navbar {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    color: #F4F9FF;
+}
+
+#nav-selection-button {
+    padding: 10px;                /* Space inside the box */
+    margin: 10px;                 /* Space between boxes */
+    background-color:  #c0449f;  
+    border: 2px solid rgb(103, 7, 97); /* Border around the box */
+    border-radius: 8px;          /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 150px;                /* Fixed width */
+    height: 50px;                /* Fixed height */
+    display: flex;               /* Use flexbox to center content */
+    justify-content: center;     /* Horizontally center content */
+    align-items: center;         /* Vertically center content */
+    font-size: 30px;
+    color: #F4F9FF;
+}
+
+#nav-selection-button:hover {
+    background-color: #b23892;   /* Light background color */
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+

@@ -1,0 +1,138 @@
+* {
+    font-family: 'Cinzel', serif, 'MedievalSharp', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #F4F9FF;
+}
+
+body {
+    background: linear-gradient(135deg, #3f2a65, #4d4896); /* Deep twilight blues */
+    color: #F4F9FF; /* Soft, starry white text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('writelingsBackground.png'); /* Add a subtle starry background if desired */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    background-color: #4d4896; /* Deep mystical purple-blue */
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Stronger glowing effect */
+}
+
+.site-title {
+    font-size: 80px;
+    color: #F4F9FF; /* Starry white text */
+    background-color: #302a74; /* Deep purplish blue */
+    padding: 30px 60px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 30px #F1C27D; /* Soft glowing effect */
+    text-shadow: 0 0 15px #F1C27D, 0 0 30px #F1C27D; /* Enhance glowing effect */
+}
+
+.site-description {
+    font-size: 2.5rem;
+    color: #dfd0e8; /* Soft lavender */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    font-style: italic;
+    letter-spacing: 1px; /* Adds an airy feel */
+}
+
+.register-container {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #F4F9FF;
+    margin-top: 40px;
+    padding: 40px;
+    background-color: rgba(77, 72, 150, 0.8); /* Semi-transparent mystical purple */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 25px #F1C27D; /* Soft glowing effect */
+    width: 50%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-container h2 {
+    font-size: 2.5rem;
+    color: #dfd0e8; /* Soft lavender */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-container input {
+    font-family: 'Cinzel', serif, 'MedievalSharp', cursive;
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #6F2160; /* Twilight purple border */
+    border-radius: 10px;
+    background-color: rgba(63, 42, 101, 0.8); /* Deep translucent purple */
+    color: #F4F9FF;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 0 12px rgba(241, 194, 125, 0.6); /* Soft glow */
+}
+
+.register-container input::placeholder {
+    color: #dfd0e8;
+    opacity: 0.8;
+}
+
+.register-container button {
+    font-family: 'Cinzel', serif, 'MedievalSharp', cursive;
+    padding: 12px 24px;
+    border: 2px solid #6F2160;
+    border-radius: 15px;
+    background-color: #4d4896;
+    color: #F4F9FF;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px #F1C27D;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.register-container button:hover {
+    background-color: #6F2160;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(241, 194, 125, 0.8);
+}
+
+.register-container p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.register-container a {
+    color: #F1C27D;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+    font-size: 1.2rem;
+    color: #F1C27D; /* Soft glowing orange */
+    margin-top: 5px;
+    text-shadow: 0 0 8px rgba(241, 194, 125, 0.8);
+}

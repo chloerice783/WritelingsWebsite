@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Writelings</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="writing-gallery.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        {{> navbar}}
+        <h1>Writing Gallery</h1>
+    </header>
+
+    <!-- Modal for creating texts -->
+    <div id="create-text-modal-overlay" class="hidden">
+      <div id="create-text-modal">
+          <div class="modal-dialog">
+              <div class="modal-header">
+                  <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+                  <h3>Create Text</h3>
+              </div>
+
+              <div class="modal-body">
+                  <div class="text-input-element">
+                      <label for="text-name-input">Text name:</label>
+                      <input type="text" id="text-name-input">
+                  </div>
+
+                  <div class="text-input-element">
+                      <span title="Word count goal can be changed later."
+                          style="cursor: help; border: 1px solid gray; border-radius: 50%; padding: 2px 6px; font-weight: bold;">?</span>
+                      <label for="word-count-goal-input">Word count goal:</label>
+                      <input type="number" id="word-count-goal-input" min="1" step="1">
+                  </div>
+
+                  <div class="text-input-element">
+                      <span title="Due date option will only allow a reward if the project is completed by the due date. Cannot be changed."
+                          style="cursor: help; border: 1px solid gray; border-radius: 50%; padding: 2px 6px; font-weight: bold;">?</span>
+                      <label for="text-due-date-input">Due date:</label>
+                      <input type="checkbox" id="due-date-checkbox" checked>
+                      <input type="date" id="text-due-date-input">
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" id="modal-accept" class="action-button">Create Text</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Container for text file icons/buttons -->
+    <div id="texts-container">
+        {{#each texts}}
+          {{> textFileIcon}}
+        {{/each}}
+        <button type="button" id="create-text-button"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- Modal for text information -->
+    <div id="text-info-modal-overlay" class="hidden">
+      <div id="text-info-modal">
+          <div class="modal-dialog">
+              <div class="text-info-header">
+                  <button type="button" id="text-info-modal-close" class="modal-hide-button">&times;</button>
+                  <h3>Text Info</h3>
+              </div>
+
+              <div class="text-info-body">
+                  <div class="text-info-element">
+                      <span>Text name: </span><span id="text-name"></span>
+                  </div>
+
+                  <div class="text-info-element">
+                      <span title="Word count goal can be changed later."
+                          style="cursor: help; border: 1px solid gray; border-radius: 50%; padding: 2px 6px; font-weight: bold;">?</span>
+                      <span>Word count goal: </span><span id="word-count-goal"></span>
+                  </div>
+
+                  <div class="text-info-element">
+                      <span>Word Count: </span><span id="word-count"></span>
+                  </div>
+
+                  <div class="text-info-element">
+                      <span title="Due date option will only allow a reward if the project is completed by the due date. Cannot be changed."
+                          style="cursor: help; border: 1px solid gray; border-radius: 50%; padding: 2px 6px; font-weight: bold;">?</span>
+                      <span>Due date: </span><span id="text-due-date">None</span>
+                  </div>
+
+                  <div class="text-info-element">
+                      <span>Reward Rarity: </span><span id="reward-rarity"></span>
+                  </div>
+
+                  <div class="text-info-element">
+                      <span>Status: </span><span id="text-status"></span>
+                  </div>
+              </div>
+
+              <div class="text-info-footer">
+                  <button type="button" id="open-text">Open Text</button>
+                  <button type="button" id="delete-text">Delete Text</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="delete-modal-overlay" class="hidden">
+        <div id="delete-container">
+            <div id="delete-container-header">
+                <h3>Delete this file?</h3>
+            </div>
+
+            <div id="delete-body">
+                <span>Once deleted, you will not be able to recover this file or its data.</span>
+            </div>
+
+            <div id="delete-footer">
+                  <button type="button" id="cancel-delete">Cancel</button>
+                  <button type="button" id="accept-delete">Delete Text</button>
+              </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts (placed at the bottom for better performance) -->
+    <script src="writingGallery.js"></script>
+
+</body>
+
+</html>

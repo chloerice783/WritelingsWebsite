@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Writelings</title>
+</head>
+
+  
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="egg-nursery.css">
+
+<body>
+
+    <header>
+
+       
+         {{> navbar}}
+
+        <h1>Egg Nursery</h1>
+
+    </header>
+
+        <div id="egg-collection-container">
+
+            {{#each eggs}}
+                {{> eggSlot}}
+            {{/each}}
+
+        </div>
+
+
+        <div id="modal-overlay" class="hidden">
+        <div id="reward-container">
+            <div id="reward-container-header">
+                <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+                <span>You've received a: </span><span id="reward-name">{{reward_species}}</span>
+            </div>
+
+            <div id="reward-image">
+                <img src={{reward_image}}>
+            </div>
+
+        </div>
+    </div>
+ <script src="eggNursery.js"></script>
+<body>

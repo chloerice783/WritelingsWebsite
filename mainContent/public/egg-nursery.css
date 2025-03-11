@@ -1,0 +1,178 @@
+body {
+    background: linear-gradient(135deg, #3f2a65, #4d4896); /* Deep twilight blues */
+    color: #F4F9FF; /* Soft, starry white text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('writelingsBackground.png'); 
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+#egg-collection-container {
+    margin: 40px;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap; /* Allow wrapping to new rows */
+    gap: 20px; /* Space between egg slots */
+    justify-content: center; /* Ensure alignment to the start of the container */
+}
+
+/* egg Slot Styling */
+.egg-slot {
+    
+    margin: 40px;
+    background: white;
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    overflow: hidden; /* Prevents content from spilling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.egg-slot:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Header Styling */
+.egg-slot-header {
+    background-color: #302a74; /* Deep purplish blue */
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 2px solid #4d1862; /* Matches theme */
+}
+
+/* Image Container */
+.egg-image {
+    flex-grow: 1; /* Makes image section expand */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #e5d8f2; /* Soft lavender */
+}
+
+.egg-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* Footer Styling */
+.egg-slot-footer {
+    background: #882e70;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #4d1862;
+}
+
+.egg-slot-footer button {
+    background-color: #c0449f;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.egg-slot-footer button:hover {
+    background-color: #a23284;
+}
+
+
+#reward-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the element */
+  background: white;
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Header Styling */
+#reward-container-header {
+  background-color: #302a74; /* Deep purplish blue */
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 2px solid #4d1862; /* Matches theme */
+}
+
+/* Image Container */
+#reward-image {
+  flex-grow: 1; /* Makes image section expand */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: #e5d8f2; /* Soft lavender */
+}
+
+#reward-image img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+#modal-close {
+  background-color:  #c0449f;
+  color: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px; /* Adjust distance from top */
+  left: 10px; /* Adjust distance from left */
+  padding: 0;
+  cursor: pointer;
+}
+
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none !important;
+}
+  
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

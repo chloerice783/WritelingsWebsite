@@ -1,0 +1,99 @@
+* {
+    font-family: 'Cinzel', serif, 'MedievalSharp', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #F4F9FF;
+}
+
+body {
+    background: linear-gradient(135deg, #3f2a65, #4d4896); /* Deep twilight blues */
+    color: #F4F9FF; /* Soft, starry white text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('writelingsBackground.png'); /* Add a subtle starry background if desired */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    background-color: #4d4896; /* Deep mystical purple-blue */
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Stronger glowing effect */
+}
+
+.site-title {
+    font-size: 80px;
+    color: #F4F9FF; /* Starry white text */
+    background-color: #302a74; /* Deep purplish blue */
+    padding: 30px 60px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 30px #F1C27D; /* Soft glowing effect */
+    text-shadow: 0 0 15px #F1C27D, 0 0 30px #F1C27D; /* Enhance glowing effect */
+}
+
+.site-description {
+    font-size: 2.5rem;
+    color: #dfd0e8; /* Soft lavender */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    font-style: italic;
+    letter-spacing: 1px; /* Adds an airy feel */
+}
+
+.login-container {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #F4F9FF;
+    margin-top: 40px;
+    flex-grow: 1;
+}
+
+button, input {
+    font-family: 'Cinzel', serif, 'MedievalSharp', cursive;
+    padding: 12px 24px;
+    border: 2px solid #6F2160; /* Deep twilight purple border */
+    border-radius: 15px;
+    background-color: #4d4896; /* Royal purple */
+    color: #F4F9FF;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px #F1C27D; /* Soft glow around buttons */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, input:hover {
+    background-color: #6F2160; /* Twilight purple on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(241, 194, 125, 0.8); /* Extra glowing on hover */
+}
+
+a {
+    color: #302a74;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.login-image {
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Error message styling */
+.error-message {
+    font-size: 1.2rem;
+    color: #F1C27D; /* Soft glowing orange */
+    margin-top: 5px;
+    text-shadow: 0 0 8px rgba(241, 194, 125, 0.8);
+}

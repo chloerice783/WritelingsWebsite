@@ -1,0 +1,43 @@
+  <div class="text-info-body">
+
+      <div class="text-info-element">
+        <label for="text-name-input">Text name:</label>
+        <input type="text" id="text-name-input"></input>
+      </div>
+
+      <div class="text-info-element">
+        <span title="Word count goal can be changed later." 
+        style="cursor: help; border: 1px solid gray; border-radius: 50%; padding: 2px 6px; font-weight: bold;">?</span>
+        <label for="word-count-goal">Word count goal:</label>
+        <input type="number" id="word-count-goal-input" min="1">
+      </div>
+
+      <div class="text-info-element">
+        <span class="word-count">Word Count: 0</span>
+      </div>
+
+
+      <div class="text-info-element">
+        <span title="Due date option will only allow a reward if the project is completed by the due date. Cannot be changed." 
+        style="cursor: help; border: 1px solid gray; border-radius: 50%; padding: 2px 6px; font-weight: bold;">?</span>
+        <span class="text-due-date">Due date: None</span>
+      </div>
+
+      <div class="text-info-element">
+        <span class="reward-rarity">Reward Rarity: Common</span>
+      </div>
+
+      <div class="text-info-element">
+        <span class="word-count">Status: incomplete</span>
+      </div>
+
+
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" id="modal-accept" class="action-button">Edit Text</button>
+      <button type="button" id="delete-text" class="action-button">Delete Text</button>
+    </div>
+
+  </div>
+  </div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Writelings</title>
+</head>
+
+  
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="creature-collection.css">
+
+<body>
+
+    <header>
+         {{> navbar}}
+        <h1>Creature Collection</h1>
+
+    </header>
+
+    <div id="creature-info-overlay" class="hidden">
+        <div id="creature-info-modal">
+            <div id="info-modal-content">
+                <div class="creature-info-header">
+                    <button id="close-creature-info">&times;</button>
+                    <h2>Creature Info - <span id="info-species">{{species}}</span></h2>
+                </div>
+
+                <div id="creature-info-body">
+                    <p id="info-rarity"><strong>Rarity:</strong> <span class="rarity">{{creature_rarity}}</span></p>
+                    <p id="info-amount"><strong>Amount:</strong> {{creature_amount}}</p>
+                    <p id="info-description">{{creature_description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="creature-collection-container">
+
+      {{#each creatures}}
+         {{> creatureSlot}}
+      {{/each}}
+
+    </div>
+
+    <!-- Scripts (placed at the bottom for better performance) -->
+    <script src="creatureCollection.js"></script>
+
+<body>

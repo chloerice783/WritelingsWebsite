@@ -1,0 +1,185 @@
+body {
+    background: linear-gradient(135deg, #3f2a65, #4d4896); /* Deep twilight blues */
+    color: #F4F9FF; /* Soft, starry white text */
+    display: flex;
+    flex-direction: column;
+    background-image: url('writelingsBackground.png'); 
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+}
+
+#creature-collection-container {
+    margin: 40px;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap; /* Allow wrapping to new rows */
+    gap: 20px; /* Space between creature slots */
+    justify-content: center; /* Ensure alignment to the start of the container */
+}
+
+
+
+/* Creature Slot Styling */
+.creature-slot {
+    
+    margin: 40px;
+    background: white;
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    overflow: hidden; /* Prevents content from spilling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+.creature-slot:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Header Styling */
+.creature-slot-header {
+    background-color: #302a74; /* Deep purplish blue */
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 2px solid #4d1862; /* Matches theme */
+}
+
+/* Image Container */
+.creature-image {
+    flex-grow: 1; /* Makes image section expand */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #e5d8f2; /* Soft lavender */
+}
+
+.creature-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* Footer Styling */
+.creature-slot-footer {
+    background: #882e70;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #4d1862;
+}
+
+.creature-slot-footer button {
+    background-color: #c0449f;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.creature-slot-footer button:hover {
+    background-color: #a23284;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~Stuff for creature info~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display:flex
+}
+
+
+/* Creature Info Modal (Overlay) */
+#creature-info-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Creature Info Panel */
+#creature-info-modal {
+    background: #4d4896;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    color: white;
+}
+
+/* Header Styling */
+.creature-info-header {
+    background-color: #302a74;
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Close Button */
+#close-creature-info{
+    background-color: #a23284;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Modal Body */
+#creature-info-body {
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+}
+
+/* Rarity Coloring */
+.rarity {
+    font-weight: bold;
+}
+
+/* Example rarity colors */
+.rarity.common { color: gray; }
+.rarity.rare { color: blue; }
+.rarity.epic { color: purple; }
+.rarity.legendary { color: gold; }
+
+/* Description */
+.description {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

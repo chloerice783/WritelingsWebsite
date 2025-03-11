@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(135deg, #3f2a65, #4d4896); /* Deep twilight blues */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('writelingsBackground.png'); 
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+
+  }
+
+  /* For the text area */
+textarea {
+  width: 800px;  /* Fixed width (similar to Google Docs) */
+  height: 1000px; /* Fixed height (similar to Google Docs) */
+  border: 1px solid #ccc; /* Subtle border color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for text inside the box */
+  font-size: 16px; /* Readable font size */
+  font-family: 'Arial', sans-serif; /* Clean, readable font */
+  line-height: 1.5; /* Spacing between lines */
+  resize: none; /* Disable resizing */
+  background-color: #fff; /* White background for clarity */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  color: black; /* Soft, starry white text */
+}
+
+/* Focus effect similar to Google Docs */
+textarea:focus {
+  border-color: #4d4896; /* Highlight the border with a purple color */
+  outline: none; /* Remove the default outline */
+  box-shadow: 0 0 10px rgba(77, 72, 150, 0.5); /* Subtle glow around the box */
+}
+
+
+.text-container{
+  align-items: center;
+  color: black; /* Soft, starry white text */
+}
+
+.text-buttons{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+.text-option {
+  padding: 10px;                /* Space inside the box */
+  margin: 10px;                 /* Space between boxes */
+  background-color:  #c0449f;  
+  border: 2px solid rgb(103, 7, 97); /* Border around the box */
+  border-radius: 8px;          /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 150px;                /* Fixed width */
+  height: 50px;                /* Fixed height */
+  display: flex;               /* Use flexbox to center content */
+  justify-content: center;     /* Horizontally center content */
+  align-items: center;         /* Vertically center content */
+  font-size: 30px;
+  color: #F4F9FF;
+}
+
+#save-text-button{
+  background-color: #4d4896;
+  border: 2px solid  #2a2661; /* Border around the box */
+}
+
+#save-text-button:hover {
+  background-color :#403b83;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+#reward-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the element */
+  background: white;
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Header Styling */
+#reward-container-header {
+  background-color: #302a74; /* Deep purplish blue */
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 2px solid #4d1862; /* Matches theme */
+}
+
+/* Image Container */
+#reward-image {
+  flex-grow: 1; /* Makes image section expand */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: #e5d8f2; /* Soft lavender */
+}
+
+#reward-image img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+#modal-close {
+  background-color:  #c0449f;
+  color: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px; /* Adjust distance from top */
+  left: 10px; /* Adjust distance from left */
+  padding: 0;
+  cursor: pointer;
+}
+
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none !important;
+}
+  

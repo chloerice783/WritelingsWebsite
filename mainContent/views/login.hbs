@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Writelings</title>
+  </head>
+
+  
+  <link rel="stylesheet" href="login.css">
+
+
+  <body>
+
+      <header>
+      <h1 class="site-title">Writelings</h1>
+
+      <h2 Class="site-description ">Collect creatures while you write!</h2>
+      </header>
+
+
+      <div class="login-container">
+          <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+          </form>
+        <p id="error-message" class="error-message"></p>
+        <p>Don't have an account? <a href="/register">Create one here</a>.</p>
+
+
+      </div>
+
+      <div class="login-image">
+        <img src="WritelingsMascotPlaceholder.png" alt="Writelings-mascot">
+      </div>
+    <script src="login.js"></script>
+  </body>
+
+  </html>

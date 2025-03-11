@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="text-page.css">
+    <title>Edit Text</title>
+</head>
+<body>
+    <header>
+               
+        {{> navbar}}
+        <h1>{{text_title}}</h1>
+       
+    </header>
+
+    <div class="text-container">
+        <textarea 
+        id="text-input" 
+        data-text_id="{{text_id}}" 
+        data-reward_rarity="{{reward_rarity}}" 
+        data-word_count="{{word_count}}" 
+        data-word_goal="{{word_goal}}" 
+        data-text_status="{{text_status}}" 
+        rows="10" 
+        cols="40">{{text_content}}
+        </textarea>
+    <br>
+    </div>
+
+    <div class="text-buttons">
+        <button type="button" id="save-text-button" class="text-option">Save</a></button>
+        <span class="text-option" id="word-count-display">Word count: {{word_count}} / {{word_goal}} </span>
+    </div>
+
+
+    <div id="modal-overlay" class="hidden">
+        <div id="reward-container">
+            <div id="reward-container-header">
+                <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+                <span id="reward-name">{{reward_species}}</span>
+            </div>
+
+            <div id="reward-image">
+                <img src={{reward_image}}>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    </div>
+
+    <script src="textPage.js"></script>
+</body>
+</html>

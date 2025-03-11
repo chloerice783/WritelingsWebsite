@@ -1,0 +1,372 @@
+
+*{
+  color: #F4F9FF;
+}
+
+body {
+  background: linear-gradient(135deg, #3f2a65, #4d4896); /* Deep twilight blues */
+  color: #F4F9FF; /* Soft, starry white text */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('writelingsBackground.png'); 
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#create-text-modal-overlay, #text-info-modal-overlay, #delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#delete-container {
+  width: 350px;
+  background-color: #4d4896; 
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  overflow: hidden; /* ensures header/footer conform to container's border radius */
+}
+
+/* Header stretches full width and is flush with top */
+#delete-container-header {
+  background-color: #302a74; /* Darker purple */
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#delete-container-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Close button styling */
+#delete-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #F4F9FF;
+  cursor: pointer;
+}
+
+/* Modal body */
+#delete-body {
+  padding: 20px 15px;
+  font-size: 16px;
+  text-align: center;
+  color: #4d4896; 
+}
+
+/* Footer stretches full width and is flush with bottom */
+#delete-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #302a74; /* Darker purple */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Cancel button */
+#cancel-delete {
+  padding: 10px 24px; 
+  font-size: 18px; 
+  background-color: #c0449f;
+  color: #fff;
+}
+
+#cancel-delete:hover {
+  background-color:  #9f3583;
+
+}
+
+/* Accept/Delete button */
+#accept-delete {
+  padding: 10px 24px;  
+  font-size: 18px; 
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+#accept-delete:hover {
+  background-color: #b62727;
+}
+
+
+
+#create-text-modal {
+    
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 1000;
+ 
+}
+
+.text-input-element {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+#text-due-date-input, #word-count-goal-input, #text-name-input {
+  background-color: #302a74;
+}
+
+.modal-dialog {
+  background-color:  #4d4896;
+  border-radius: 15px;
+  width: 700px;
+  height: 500px;
+}
+
+.modal-header, .text-info-header, #delete-container-header {
+  padding: 10px 20px;
+  background-color: #302a74;
+}
+
+.modal-header h3, .text-info-header h3 {
+  margin: 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+#modal-accept {
+  padding: 10px;                /* Space inside the box */
+  margin: 10px;                 /* Space between boxes */
+  background-color:  #c0449f;  /* Light background color */
+  border: 2px solid #9e2b7f;      /* Border around the box */
+  border-radius: 8px;          /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 200px;                /* Fixed width */
+  height: 75px;                /* Fixed height */
+  display: flex;               /* Use flexbox to center content */
+  justify-content: center;     /* Horizontally center content */
+  align-items: center;         /* Vertically center content */
+  font-family: Arial, sans-serif; /* Clean font for readability */
+  font-size: 30px;
+
+}
+
+#modal-close, #text-info-modal-close {
+  background-color:  #c0449f;
+  color: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px; /* Adjust distance from top */
+  left: 10px; /* Adjust distance from left */
+  padding: 0;
+  cursor: pointer;
+}
+
+
+#modal-accept:hover{
+  background-color: #a23284;   /* Light background color */
+  border: #802267;    /* Border around the box */
+  cursor: pointer;
+}
+
+.modal-body, #delete-body {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.info-comment {
+  font-size: 20px;
+  color: rgb(73, 73, 73);
+
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text */
+}
+
+.hidden {
+  display: none !important;
+}
+  
+
+/*Create text button stuff*/
+#create-text-button {
+position: fixed;
+right: 30px;
+bottom: 30px;
+height: 60px;
+width: 60px;
+border: none;
+border-radius: 30px;
+font-size: 36px;
+background-color: #c0449f;
+color: #fff;
+cursor: pointer;
+box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/*Stuff for the created text file icons and text container*/
+#texts-container {
+  margin: 40px;
+  display: flex;
+  flex-direction: row !important;
+  gap: 20px; 
+  flex-wrap: wrap;
+  }
+
+.text-file-icon {
+background-color: white;
+width:200px;
+height:250px;
+outline: 2px solid black;
+position: relative;
+transition: transform 0.2s ease-in-out;
+
+}
+
+.text-file-icon:hover{
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.text-file-header {
+padding: 10px 20px;
+background-color:  #c0449f;
+outline: 2px solid black;
+
+}
+
+.text-file-footer {
+
+background:  #c0449f;
+outline: 2px solid black;
+position: absolute;
+bottom: 0;
+width:200px;
+height: 30px;
+text-align: center;
+display: flex; /* Center the text */
+align-items: center; /* Vertically center text */
+justify-content: center; /* Horizontally center text */
+
+}
+
+#open-text{
+  padding: 10px;                /* Space inside the box */
+  margin: 10px;                 /* Space between boxes */
+  background-color:  #c0449f;  /* Light background color */
+  border: 2px solid #9e2b7f;      /* Border around the box */
+  border-radius: 8px;          /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 200px;                /* Fixed width */
+  height: 75px;                /* Fixed height */
+  display: flex;               /* Use flexbox to center content */
+  justify-content: center;     /* Horizontally center content */
+  align-items: center;         /* Vertically center content */
+  font-family: Arial, sans-serif; /* Clean font for readability */
+  font-size: 30px;
+}
+
+#delete-text{
+  padding: 10px;                /* Space inside the box */
+  margin: 10px;                 /* Space between boxes */
+  background-color:  #c0449f;  /* Light background color */
+  border: 2px solid #9e2b7f;      /* Border around the box */
+  border-radius: 8px;          /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 200px;                /* Fixed width */
+  height: 75px;                /* Fixed height */
+  display: flex;               /* Use flexbox to center content */
+  justify-content: center;     /* Horizontally center content */
+  align-items: center;         /* Vertically center content */
+  font-family: Arial, sans-serif; /* Clean font for readability */
+  font-size: 30px;
+
+}
+
+#open-text:hover{
+  background-color: #a23284;   /* Light background color */
+  border: #802267;    /* Border around the box */
+  cursor: pointer;
+}
+
+
+#delete-text:hover{
+  background-color: #a23284;   /* Light background color */
+  border: #802267;    /* Border around the box */
+  cursor: pointer;
+}
+
+
+#create-text-button:hover,
+#create-text-button:focus {
+right: 27px;
+bottom: 27px;
+height: 66px;
+width: 66px;
+border-radius: 33px;
+font-size: 40px;
+}
+
+
+#create-text-button:focus {
+outline: none;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~Stuff for the text information modal~~~~~~~~~~~~~~~~~~~~~~~*/
+#text-info-modal {
+    
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 1000;
+ 
+}
+
+.text-info-body {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.text-info-footer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text */
+}
+
+
